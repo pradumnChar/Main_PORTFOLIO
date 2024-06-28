@@ -3,7 +3,7 @@ import bot from "../assets/bot.jpg"
 import qr from "../assets/qr.jpg"
 import cloud from "../assets/cloud.png"
 import movie from "../assets/movie.jpg"
-import tictoc from "../assets/tictoc.png"
+import snare from "../assets/tictoc.png"
 
 export const data =[
     {
@@ -35,19 +35,20 @@ export const data =[
        // live:"",
     },
     
+   
     {
         id:5,
-        name:"TicToc: Game",
-        image:tictoc,
-        github:"https://github.com/pradumnChar/tictok",
-        //live:"",
-    },
-    {
-        id:6,
         name:"A Movie App",
         image:movie,
         github:"https://github.com/pradumnChar/MovieApp",
         // live:"",
+    },
+    {
+        id:6,
+        name:"DrunKit: An Online Stimulator",
+        image:snare,
+        github:"https://github.com/pradumnChar/DRUM-KIT-",
+        //live:"",
     },
 
 ]
