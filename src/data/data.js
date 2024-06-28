@@ -3,7 +3,7 @@ import bot from "../assets/bot.jpg"
 import qr from "../assets/qr.jpg"
 import cloud from "../assets/cloud.png"
 import movie from "../assets/movie.jpg"
-import snare from "../assets/tictoc.png"
+import snare from "../assets/snare.png"
 
 export const data =[
     {
