@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import resume from '../pradumnResume.pdf'
 const Home = () => {
   return (
     <>
@@ -18,9 +19,10 @@ const Home = () => {
           <div className="but">
             
           <a 
-      href="/" 
+      href= {resume}
+      download
       target="_blank" 
-      rel="noopener noreferrer" 
+    rel="noopener noreferrer"
       className="px-4 py-2 bg-[#444cf7] text-white rounded hover:bg-blue-700 transition duration-300"
     >
       View Resume
