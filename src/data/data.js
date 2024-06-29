@@ -2,8 +2,8 @@ import ok from "../assets/ok.jpg"
 import bot from "../assets/bot.jpg"
 import qr from "../assets/qr.jpg"
 import cloud from "../assets/cloud.png"
-import movie from "../assets/movie.jpg"
-import snare from "../assets/snare.png"
+// import movie from "../assets/movie.jpg"
+// import snare from "../assets/snare.png"
 
 export const data =[
     {
@@ -25,30 +25,30 @@ export const data =[
         name:"J-Bot: A Discord-Bot",
         image:bot,
         github:"https://github.com/pradumnChar/J_BOT---DISCORDBOT",
-        //live:"Error loading",
+        live:"https://discord.gg/5GfhRUdc",
     },
     {
         id:4,
         name:"QR-Code: QR-CLI",
         image:qr,
         github:"https://github.com/pradumnChar/QR-Code",
-       // live:"",
+        live:"/error",
     },
     
    
-    {
-        id:5,
-        name:"A Movie App",
-        image:movie,
-        github:"https://github.com/pradumnChar/MovieApp",
-        // live:"",
-    },
-    {
-        id:6,
-        name:"DrunKit: An Online Stimulator",
-        image:snare,
-        github:"https://github.com/pradumnChar/DRUM-KIT-",
-        //live:"",
-    },
+    // {
+    //     id:5,
+    //     name:"A Movie App",
+    //     image:movie,
+    //     github:"https://github.com/pradumnChar/MovieApp",
+    //     live:"/",
+    // },
+    // {
+    //     id:6,
+    //     name:"DrunKit: An Online Stimulator",
+    //     image:snare,
+    //     github:"https://github.com/pradumnChar/DRUM-KIT-",
+    //     //live:"",
+    // },
 
 ]

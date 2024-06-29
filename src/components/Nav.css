@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -29,7 +29,7 @@ nav {
 }
 #nav-com li a:hover {
   /* color: blue; */
-  color: #444cf7;
+  /* color: #444cf7;
 }
 
 #mobile {
@@ -72,4 +72,4 @@ nav {
   #nav-com{
     display: none;;
   }
-}
+} */ 

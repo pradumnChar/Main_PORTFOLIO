@@ -27,8 +27,8 @@ function Projects() {
               className="shadow-md shadow-[#444cf7] group container rounded-md 
               flex justify-center text-center  mx-auto content-div p-3 "
             >
-              <div className="opacity-0 group-hover:opacity-90 ">
-                <span className=" text-1xl font bold text-black ">
+              <div className="opacity-0 group-hover:opacity-95 ">
+                <span className=" text-1xl font bolder text-black ">
                   {item.name}
                 </span>
                 <div className="pt-10 text-center ">

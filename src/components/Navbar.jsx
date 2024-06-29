@@ -1,17 +1,20 @@
 import React from "react";
-import { FaBars, FaTimes,FaGithub,FaTwitter,FaLinkedin } from "react-icons/fa";
+import { FaBars, FaTimes,FaGithub,FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from 'react-icons/hi';
 import "./Nav.css";
 import { useState } from "react";
 import { Link } from "react-scroll";
-const Navbar = () => {
+
   
     /*USE STATE FOR HANDLING LOGO DYNAMIC FOR MOB LAP */
-  
-  const [state, setState] = useState(false);
+
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
 
   return (
-    <>
-    <nav>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 '>
+       
       <a className="o" href="index.html">
         <svg
           id="logo-82"
@@ -22,7 +25,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="ccustom"
+            class="custom"
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M1.04165 8.6424C0.0059185 11.2006 -0.265077 14.0155 0.262973 16.7313C0.790959 19.447 2.09428 21.9416 4.00802 23.8995C5.92176 25.8574 8.36009 27.1908 11.0145 27.731C13.6691 28.2712 16.4205 27.9939 18.921 26.9343C21.4214 25.8747 23.5586 24.0802 25.0622 21.778C25.1023 21.7166 25.1419 21.6549 25.181 21.5929C25.2086 21.5492 25.236 21.5052
@@ -34,51 +37,103 @@ const Navbar = () => {
         </svg>
       </a>
 
-      <div>
-        <ul id={state ? "open" : "nav-com"}>
-          <li>
-          <Link to='home' smooth={true} duration={600}>Home</Link>
-          </li>
-          <li>
-          <Link to='about' smooth={true} duration={600}>About</Link>
-          </li>
-       
-          <li>
-          <Link to='project' smooth={true} duration={600}>Project</Link>
-          </li>
-          <li>
-          <Link to='contact' smooth={true} duration={600}>Contact</Link>
-          </li>
-        </ul>
-      </div>
-      <div id="mobile" onClick={()=>setState(!state)}>
-      <FaBars className="bar"/>
-      </div>
-      {/*react icon */}
-
-      {/*Mobile res */}
-      {/* *Making state in order to operate the fonts */}
-    </nav>
-    <div className="hidden lg:flex fixed flex-col">
-    <div className="okk">
-      <ul >
-        <li className="w-[160px] h-[70px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-100 bg-[#e5e5f7]">
-          <a className="flex justify-between items-center w-full p-[5px] "
-          href="/">Twitter <FaTwitter size={28}/></a>
+      {/* menu */}
+      <ul className='hidden md:flex p-8'>
+        <li className="text-[#444cf7] cursor-pointer text-lg ">
+          <Link to='home' smooth={true} duration={500}>
+            Home
+          </Link>
         </li>
-        <li className="w-[160px] h-[70px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-100 bg-[#e5e5f7]">
-          <a className="flex justify-between items-center w-full p-[5px] " 
-          href="/">GitHub <FaGithub size={28}/></a>
+        <li  className="text-[#444cf7] cursor-pointer text-lg ">
+          <Link to='about' smooth={true} duration={500}>
+            About
+          </Link>
         </li>
-        <li className="w-[160px] h-[70px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-100 bg-[#e5e5f7]">
-          <a className="flex justify-between items-center w-full p-[5px] "
-          href="/"> Linkedin <FaLinkedin size={28}/></a>
+      
+        <li  className="text-[#444cf7] cursor-pointer text-lg">
+          <Link to='project' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li  className="text-[#444cf7] cursor-pointer text-lg ">
+          <Link to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
         </li>
       </ul>
+      <div onClick={handleClick} className='md:hidden z-10'>
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
+
+   {/* FOR BEING FOR RESPOSNIVE */}
+   {/* i have to show a icon rather than whole */}
+      <ul
+        className={
+          !nav
+            ? 'hidden'
+            : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'
+        }
+      >
+        <li className='py-6 text-4xl  cursor-pointer hover:text-blue-800'>
+          <Link onClick={handleClick} to='home' smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className='py-6 text-4xl cursor-pointer hover:text-blue-800'>
+         
+          <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+      
+        <li className='py-6 text-4xl cursor-pointer hover:text-blue-800'>
+         
+          <Link onClick={handleClick} to='project' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className='py-6 text-4xl cursor-pointer hover:text-blue-800'>
+       
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
+      </ul>
+
+      {/* *{SOCIAL LINK: NAV} */}
+      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 text-blue-800'>
+            <a
+              className='flex justify-between items-center w-full '
+              href='https://www.linkedin.com/in/pradumn-jadli-7023a7250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            >
+              Linkedin <FaLinkedin size={28}  />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 text-black-800'>
+            <a
+              className='flex justify-between items-center w-full '
+              href='https://github.com/pradumnChar'
+            >
+              Github <FaGithub size={28} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 text-green-800 text-1xl'>
+            <a
+              className='flex justify-between items-center w-full '
+              href='mailto: pradumnjadli@gmail.com'
+            >
+              Email <HiOutlineMail size={28} />
+            </a>
+          </li>
+         
+        </ul>
       </div>
     </div>
-    </>
   );
 };
 
 export default Navbar;
+
+

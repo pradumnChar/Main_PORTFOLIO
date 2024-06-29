@@ -3,7 +3,6 @@ import javascript from "../images/javascript.png";
 import reactjs from "../images/react.png";
 import mongodb from "../images/mongo.png";
 import nodejs from "../images/node.png";
-import html from "../images/html.png";
 import css from "../images/css.png";
 import github from "../images/github.png";
 import redux from "../images/redux.png";
@@ -78,7 +77,7 @@ const About = () => {
               <div>
                 <img className="w-[70px] h-[60px]" src={github} alt="github" />
                 <span>
-                  GitHub
+                  Git
                 </span>
               </div>
               <div>
@@ -103,13 +102,10 @@ const About = () => {
                   Java
                 </span>
               </div>
-              <div>
-                <img className="w-[70px] h-[60px]" src={html} alt="HTML" />
-                <span ></span>
-              </div>
+            
               <div>
                 <img className="w-[70px] h-[60px]" src={css} alt="CSS" />
-                <span ></span>
+                <span >TailwindCSS</span>
               </div>
 
             </div>

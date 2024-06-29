@@ -6,17 +6,25 @@ const Home = () => {
     <div></div>
       <Container name="home">
         <div className="home-ok">
-          <p>Greetings Fellow Earthings!</p>
-          <h1>Pradumn Jadli</h1>
-          <h2>I'm a Full-Stack Developer.</h2>
+          <p>Greetings !</p>
+          <h1>I'm Pradumn Jadli</h1>
+          <h2>A Full-Stack Developer.</h2>
           <h3>
             Specialized in Full Stack Web Development, I'm dedicated to crafting
-            seamless digital experiences with a passion for innovation and clean
-            code.
+            seamless digital experiences with a passion <br />for innovation and clean
+            code,
+            I strive to deliver efficient and scalable solutions.
           </h3>
           <div className="but">
             
-          <button>Resume</button>
+          <a 
+      href="/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="px-4 py-2 bg-[#444cf7] text-white rounded hover:bg-blue-700 transition duration-300"
+    >
+      View Resume
+    </a>
           </div>
         </div>
       </Container>
@@ -59,7 +67,7 @@ const Container = styled.div`
       justify-content: start;
       gap: 38px;
     }
-    button {
+    ${'' /* button {
       color: #444cf7;
       margin-top: 20px;
       border: 2px solid black;
@@ -67,10 +75,13 @@ const Container = styled.div`
       padding: 8px 16px;
       background-color: #e5e5f7;
       letter-spacing: 1px;
-    }
+    } */}
 
-    button:hover {
+    ${'' /* button:hover {
       background-color: white;
+    } */}
+    a{
+      margin-top: 10px;
     }
    
     @media (max-width: 768px) {
